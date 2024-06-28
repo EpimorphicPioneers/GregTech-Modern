@@ -21,7 +21,7 @@ public class RenderBufferHelper {
      * @param x          The coordinates of the center
      * @param y          The coordinates of the center
      * @param z          The coordinates of the center
-     * @param r          The large radius of the torus, that is, the distance from the center of the torus to center of
+     * @param r          The large radius of the torus, i.e. the distance from the center of the torus to center of
      *                   the "pipe".
      * @param tubeRadius The small radius of the "pipe", i.e. the thickness of the "pipe".
      * @param sides      The number of subdivisions of the "pipe".
@@ -44,7 +44,7 @@ public class RenderBufferHelper {
         float sinTheta = 0.0F;
 
         float phi, sinPhi, cosPhi; // φ, sin(φ), cos(φ) Side angle
-        float dist; // The distance from the point to the center of the ring pipe
+        float dist; // The distance from the point to the center of the ring
 
         // Iterate through each subdivision of the ring
         for (int i = 0; i < segments; i++) {

@@ -3,6 +3,7 @@ package com.gregtechceu.gtceu.common.data;
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.common.particle.HazardParticleOptions;
 
+import com.gregtechceu.gtceu.common.particle.LaserBeamParticleOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.registries.Registries;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,15 @@ public class GTParticleTypes {
                 @Override
                 public Codec<HazardParticleOptions> codec() {
                     return HazardParticleOptions.CODEC;
+                }
+            });
+
+    public static final RegistryObject<ParticleType<LaserBeamParticleOptions>> LASER_BEAM_PARTICLE = PARTICLE_TYPES
+            .register("laser_beam", () -> new ParticleType<>(false, LaserBeamParticleOptions.DESERIALIZER) {
+
+                @Override
+                public Codec<LaserBeamParticleOptions> codec() {
+                    return LaserBeamParticleOptions.CODEC;
                 }
             });
 

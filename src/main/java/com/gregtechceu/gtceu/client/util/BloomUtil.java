@@ -9,7 +9,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.function.Consumer;
 
 @OnlyIn(Dist.CLIENT)
-public class BloomUtils {
+public class BloomUtil {
 
     public static void entityBloom(Consumer<MultiBufferSource> sourceConsumer) {
         // Shimmer will call PostProcessing.BLOOM_UNREAL.renderEntityPost in LevelRenderer#renderLevel

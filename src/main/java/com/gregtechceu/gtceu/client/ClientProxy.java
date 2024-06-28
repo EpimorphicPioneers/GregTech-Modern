@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.api.gui.compass.GTCompassUIConfig;
 import com.gregtechceu.gtceu.api.gui.compass.GTRecipeViewCreator;
 import com.gregtechceu.gtceu.api.gui.compass.MultiblockAction;
 import com.gregtechceu.gtceu.client.particle.HazardParticle;
+import com.gregtechceu.gtceu.client.particle.LaserBeamParticle;
 import com.gregtechceu.gtceu.client.renderer.entity.GTExplosiveRenderer;
 import com.gregtechceu.gtceu.common.CommonProxy;
 import com.gregtechceu.gtceu.common.data.GTBlockEntities;
@@ -68,5 +69,7 @@ public class ClientProxy extends CommonProxy {
     @SubscribeEvent
     public void onRegisterParticleProviders(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(GTParticleTypes.HAZARD_PARTICLE.get(), HazardParticle.Provider::new);
+
+        event.registerSpecial(GTParticleTypes.LASER_BEAM_PARTICLE.get(), new LaserBeamParticle.Provider());
     }
 }

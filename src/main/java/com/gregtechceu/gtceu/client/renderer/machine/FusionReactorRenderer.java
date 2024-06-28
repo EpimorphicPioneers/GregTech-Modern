@@ -4,7 +4,7 @@ import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gtceu.api.pattern.util.RelativeDirection;
 import com.gregtechceu.gtceu.client.renderer.GTRenderTypes;
-import com.gregtechceu.gtceu.client.util.BloomUtils;
+import com.gregtechceu.gtceu.client.util.BloomUtil;
 import com.gregtechceu.gtceu.client.util.RenderBufferHelper;
 import com.gregtechceu.gtceu.common.machine.multiblock.electric.FusionReactorMachine;
 
@@ -35,7 +35,7 @@ public class FusionReactorRenderer extends WorkableCasingMachineRenderer {
                 machineBlockEntity.getMetaMachine() instanceof FusionReactorMachine machine) {
             if (GTCEu.isShimmerLoaded()) {
                 PoseStack finalStack = RenderUtils.copyPoseStack(stack);
-                BloomUtils.entityBloom(source -> renderLightRing(machine, partialTicks, finalStack, source));
+                BloomUtil.entityBloom(source -> renderLightRing(machine, partialTicks, finalStack, source));
             } else {
                 renderLightRing(machine, partialTicks, stack, buffer);
             }
